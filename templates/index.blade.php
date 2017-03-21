@@ -2,7 +2,7 @@
 
 @section('content')
   @include('partials.page-header')
-
+  @php(dynamic_sidebar('sidebar-footer'))
   @if (!have_posts())
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'sage') }}

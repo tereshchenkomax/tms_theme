@@ -1,6 +1,7 @@
 <header class="banner">
-    <section id="header_area">
+    <section id="header_area" style="background-color: black">
         <div class="container-fluid">
+
 
             <div class="wrapper header">
                 <div class="clearfix header_top">
@@ -8,10 +9,7 @@
                         <a href=""><h1><span>Yellow</span> Blog</h1></a>
                     </div>
                     <div class="clearfix search floatright">
-                        <form>
-                            <input type="text" placeholder="Search"/>
-                            <input type="submit"/>
-                        </form>
+                        <?php get_search_form(); ?>
                     </div>
                 </div>
 
