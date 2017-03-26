@@ -7,10 +7,7 @@
     </header>
     <div class="entry-summary">
         <div class="clearfix wrapper main_content_area">
-
             <div class="clearfix main_content floatleft">
-
-
                 <div class="clearfix content">
                     @php(the_excerpt())
                 </div>

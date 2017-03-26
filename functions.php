@@ -85,3 +85,19 @@ if (basename($stylesheet = get_option('template')) !== 'templates') {
     wp_redirect($_SERVER['REQUEST_URI']);
     exit();
 }
+
+function go_filter() { // наша функция
+    $args = array(); // подготовим массив
+    $args['meta_query'] = array('relation' => 'AND'); // отношение между условиями, у нас это "И то И это", можно ИЛИ(OR)
+    global $wp_query; // нужно заглобалить текущую выборку постов
+
+    if (!empty($_GET['sex'])) { // если передан массив с фильтром по комнатам
+        $args['meta_query'][] = array( // пешем условия в meta_query
+            'key' => 'sex', // название произвольного поля
+            'value' => $_GET['sex'], // переданное значения, $_GET['rooms'] содержит массив со значениями отмеченных чекбоксов
+            'type' => 'string',
+            'compare' => 'IN' // тип сравнения IN, т.е. значения поля комнат должно быть одним из значений элементов массива
+        );
+    }}
+
+
