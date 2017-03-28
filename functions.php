@@ -101,3 +101,17 @@ function go_filter() { // наша функция
     }}
 
 
+require_once get_template_directory() . '/TGM-Plugin-Activation-2.6.1/activation-tgm.php';
+
+function _action_theme_wp_print_styles() {
+    if (!defined('FW')) return; // prevent fatal error when the framework is not active
+
+    $option_value = fw_get_db_customizer_option('body-color');
+
+    echo '<style type="text/css">'
+        . 'body { '
+        . 'border: 30px solid '. esc_html($option_value) .'; '
+        . '}'
+        . '</style>';
+}
+add_action('wp_print_styles', '_action_theme_wp_print_styles');
