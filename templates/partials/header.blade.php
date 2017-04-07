@@ -7,7 +7,8 @@
                         <a href=""><h1><span>Dog</span> Blog</h1></a>
                     </div>
                     <div class="clearfix search floatright">
-                        <?php echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); ?>
+                        <?php get_search_form(); ?>
+<!--                        --><?php //echo do_shortcode('[wpdreams_ajaxsearchpro id=1]'); ?>
                     </div>
                 </div>
 
