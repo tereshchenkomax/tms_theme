@@ -4,12 +4,17 @@
 
     <?php
     global $post;
-    $args = array( 'post_type' => 'dogs' );
-    $myposts = get_posts( $args );
+    $args = array('post_type' => 'dogs');
+    $myposts = get_posts($args);
     foreach( $myposts as $post ){ setup_postdata($post);
     ?>
     <div class="col-sm-4">
-        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+        <p style="text-transform: uppercase">
+            <a style="
+                font-size: 2em;
+                font-family: Roboto;
+                font-weight: 600;"
+               href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
         <?php the_content(); ?>
     </div>
     <?php

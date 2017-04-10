@@ -92,6 +92,9 @@ ul, ol {
 }
 
 /* home page style */
+.home {
+  background-color: rgba(44, 217, 255, 0);
+}
 
 #header_area {
 
@@ -114,7 +117,8 @@ ul, ol {
   background: #222;
 }
 
-.header {}
+.header {
+}
 
 .header_top {
   padding: 15px 0;
@@ -244,7 +248,8 @@ ul, ol {
   }
 }
 
-.main_content_area {}
+.main_content_area {
+}
 
 .main_content {
   width: 690px;
@@ -257,7 +262,8 @@ ul, ol {
   padding: 5px;
 }
 
-.content {}
+.content {
+}
 
 .content_title {
 
@@ -319,7 +325,8 @@ ul, ol {
   h2 {
     font-size: 20px;
     margin-bottom: 10px;
-    a {}
+    a {
+    }
   }
 }
 
@@ -342,7 +349,8 @@ ul, ol {
     width: 220px;
     height: 150px;
   }
-  p {}
+  p {
+  }
 }
 
 .pagination {
@@ -418,10 +426,12 @@ ul, ol {
   }
 }
 
-.sidebar {}
+.sidebar {
+}
 
 .single_sidebar {
-  > h2 {}
+  > h2 {
+  }
 
   padding: 10px;
   margin-bottom: 25px;
@@ -509,7 +519,8 @@ ul, ol {
 
 /*default sidebar list item*/
 
-.footer_top {}
+.footer_top {
+}
 
 .footer_top_container {
   margin-left: -20px;
@@ -539,7 +550,8 @@ ul, ol {
   }
 }
 
-.footer_bottom {}
+.footer_bottom {
+}
 
 .copyright {
   font-family: oswald;
@@ -634,7 +646,8 @@ blockquote {
   }
 }
 
-.advertisement_container, .advertisement {}
+.advertisement_container, .advertisement {
+}
 
 .content ul {
   margin-left: 30px;
@@ -690,7 +703,8 @@ blockquote {
   background: #FFD500;
   color: #fff;
   margin-bottom: 15px;
-  img {}
+  img {
+  }
   a h2 {
     color: #000;
     font-size: 14px;
@@ -727,7 +741,8 @@ blockquote {
   margin-bottom: 15px;
   margin-left: 15px;
   width: 220px;
-  img {}
+  img {
+  }
   a h2 {
     color: #ffd500;
     font-size: 14px;
@@ -769,7 +784,8 @@ blockquote {
       padding: 5px;
     }
   }
-  img {}
+  img {
+  }
   h2 {
     background: none repeat scroll 0 0 #ffd500;
     font-size: 16px;
@@ -803,7 +819,8 @@ blockquote {
   background: #f5f5f5;
 }
 
-.work_single_page_feature img {}
+.work_single_page_feature img {
+}
 
 .work_meta {
   background: none repeat scroll 0 0 #ddd;
@@ -827,7 +844,8 @@ blockquote {
 
 /* contact page style */
 
-.contact_us {}
+.contact_us {
+}
 
 .wpcf7-text:focus, .wpcf7-email:focus, .wpcf7-textarea:focus {
   box-shadow: 0.1px 0.1px 5px 1px #ddd !important;
@@ -869,3 +887,169 @@ blockquote {
 .filter {
   text-align: center;
 }
+
+//Doggy
+
+body {
+  background: #24aecd;
+  border: none !important;
+}
+
+.doggy {
+  width: 309px;
+  height: 178px;
+  background-image: url("http://i.imgur.com/Xw3FJkF.png");
+
+  -webkit-animation: play .8s steps(17) infinite;
+  -moz-animation: play .8s steps(17) infinite;
+  -ms-animation: play .8s steps(17) infinite;
+  -o-animation: play .8s steps(17) infinite;
+  animation: play .8s steps(17) infinite;
+}
+
+@-webkit-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -5413px;
+  }
+}
+
+@-moz-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -5413px;
+  }
+}
+
+@-ms-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -5413px;
+  }
+}
+
+@-o-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -5413px;
+  }
+}
+
+@keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -5413px;
+  }
+}
+
+//Menu
+
+ul#menu_tms {
+  li {
+    &:hover {
+      outline: 1px solid #08dfff;
+    }
+    a {
+      color: #08dfff;
+      position: relative;
+      text-decoration: none;
+      &:hover {
+        color: #08dfff;
+        &:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #08dfff;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+    }
+  }
+
+}
+
+//Main
+div#main-doggy {
+  text-align: center !important;
+}
+
+//Footer
+.content-info {
+  .container-fluid {
+    padding: 0;
+  }
+}
+//ul#menu_tms li {
+//  transition: color 0.25s;
+//
+//  &::before,
+//  &::after {
+//    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+//    border: 2px solid transparent;
+//    width: 0;
+//    height: 0;
+//  }
+//
+//  // This covers the top & right borders (expands right, then down)
+//  &::before {
+//    top: 0;
+//    left: 0;
+//  }
+//
+//  // And this the bottom & left borders (expands left, then up)
+//  &::after {
+//    bottom: 0;
+//    right: 0;
+//  }
+//
+//  &:hover {
+//    color: #08dfff;
+//  }
+//
+//  // Hover styles
+//  &:hover::before,
+//  &:hover::after {
+//    width: 100%;
+//    height: 100%;
+//  }
+//
+//  &:hover::before {
+//    border-top-color: #08dfff; // Make borders visible
+//    border-right-color: #08dfff;
+//    transition:
+//            width 0.25s ease-out, // Width expands first
+//            height 0.25s ease-out 0.25s; // And then height
+//  }
+//
+//  &:hover::after {
+//    border-bottom-color: #08dfff; // Make borders visible
+//    border-left-color: #08dfff;
+//    transition:
+//            border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+//            width 0.25s ease-out 0.5s, // And then exanding width
+//            height 0.25s ease-out 0.75s; // And finally height
+//  }
+//}
+
