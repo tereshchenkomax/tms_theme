@@ -13,14 +13,14 @@
       </div>
       <ul>
           <div class="filter">
-              <label>Мальчик<input type="checkbox" name="sex[]" value="male"/></label>
-              <label>Девочка<input type="checkbox" name="sex[]" value="female"/></label>
-              <button type="submit" class="btn btn-success">Отфильтровать</button>
+              <label>Мальчик<input class="boy" type="checkbox" name="boy" value="male"/></label>
+              <label>Девочка<input class="girl" type="checkbox" name="girl" value="female"/></label>
+              <button type="submit" class="btn btn-success dog-btn">Отфильтровать</button>
           </div>
-
       </ul>
   </div>
-    @include('partials.content-page')
 
+  @include('partials.content-page')
   @endwhile
 @endsection
+

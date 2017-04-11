@@ -64,3 +64,37 @@ add_filter('template_include', function ($template) {
  * Tell WordPress how to find the compiled path of comments.blade.php
  */
 add_filter('comments_template', 'App\\template_path');
+
+
+function true_filter_function(){
+    if( isset( $_POST['boy'] ) )
+        $args['meta_query'][] = array(
+            'key' => 'male',
+            'value' => $_POST['male']
+        );
+
+    if( isset( $_POST['girl'] ) )
+        $args['meta_query'][] = array(
+            'key' => 'female',
+            'value' => $_POST['female']
+        );
+
+    die();
+}
+
+
+add_action('wp_ajax_myfilter', 'true_filter_function');
+add_action('wp_ajax_nopriv_myfilter', 'true_filter_function');
+
+
+add_action( 'wp_enqueue_scripts', 'myajax_data', 100 );
+function myajax_data(){
+
+
+    wp_localize_script('sage/main.js', 'myajax',
+        array(
+            'url' => admin_url('admin-ajax.php')
+        )
+    );
+
+}
